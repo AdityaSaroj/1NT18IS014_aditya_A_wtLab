@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Insert New Breed</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li>
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li>
+          <a href="breeds.html" class="nav-link">Breeds</a>
+        </li>
+        <li>
+          <a href="breedstable.html" class="nav-link">Breeds Table</a>
+        </li>
+        <li>
+          <a href="form.html" class="nav-link">Insert New Breed</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Insert New Breed</h1>
+      <br />
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name" />
+        <br />
+        <br />
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Enter description"></textarea>
+        <br />
+        <br />
+        <label>Continent</label>
+        <br />
+        <input type="radio" id="asia" name="continent" value="asia" />
+        <label for="asia">Asia</label><br />
+        <input type="radio" id="africa" name="continent" value="africa" />
+        <label for="africa">Africa</label><br />
+        <input type="radio" id="other" name="continent" value="other" />
+        <label for="other">Other</label>
+        <br />
+        <br />
+        <label>Colour</label>
+        <br />
+        <input type="checkbox" id="grey" name="grey" value="grey" />
+        <label for="grey">Grey</label><br />
+        <input type="checkbox" id="white" name="white" value="white" />
+        <label for="white">White</label><br />
+        <br />
+        <label for="image">Upload an image:</label>
+        <input type="file" id="image" accept="image/*" />
+        <br />
+        <br />
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var attempts = 5;
+    const randNumber = Math.floor(Math.random() * 100); 
+    function checkNum(){
+        const userNumber = parseInt(document.getElementById("user-number").value);
+        const infoPara = document.getElementById("info");
+        const attemptsPara = document.getElementById("attempts");
+        console.log(randNumber, userNumber, infoPara, attemptsPara);
+        attempts--;
+        if(attempts === 0){
+            document.getElementById("check").disabled = true;
+        }
+        if(randNumber === userNumber){
+            infoPara.innerHTML = "Congrats! You WON!!!";
+            attemptsPara.innerHTML = "";
+        } else if(randNumber < userNumber){
+            infoPara.innerHTML = userNumber + " is greater";
+            attemptsPara.innerHTML = "You have " + attempts + " attempts remaining."
+        } else {
+            infoPara.innerHTML = userNumber + " is smaller"
+            attemptsPara.innerHTML = "You have " + attempts + " attempts remaining."
+        }
+        if(attempts === 0 && infoPara.innerHTML != "Congrats! You WON!!!"){
+            infoPara.innerHTML = "Sorry, you lost!"
+        }
+    }
+</script>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 84vh;
+    }
+    button{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>The Number Guessing Game</h1>
+        <p>Enter a number between 1 to 100</p>
+        <input type="text" name="number" id="user-number"/>
+        <br/>
+        <button type="submit" onclick="checkNum()" id="check">CHECK</button>
+        <p id="info">All the best!</p>
+        <p id="attempts">You have 5 attempts remaining.</p>
+        <br/>
+        <button type="button" onClick="window.location.reload();">RETRY?</button>
+    </div>
+</body>
+</html>

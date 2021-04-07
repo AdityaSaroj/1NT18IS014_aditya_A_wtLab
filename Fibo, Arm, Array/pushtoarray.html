@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <title>Push To Array</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 30%;
+      padding: 10px;
+    }
+    input[type="button"] {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      background-color: cornflowerblue;
+      color: white;
+      font-weight: 600;
+    }
+    #box {
+      border: 1px solid black;
+      width: 300px;
+      min-height: 200px;
+      overflow: auto;
+      margin: auto;
+      font-size: 2em;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <h1>Push Elements To Array</h1>
+    <script type="text/javascript">
+      var number = [];
+      function myFunction() {
+        var x = document.getElementById("box");
+        number.push(document.getElementById("input").value);
+        x.innerHTML = number.join("<br/>");
+      }
+    </script>
+    <form>
+      <input
+        id="input"
+        type="text"
+        placeholder="Enter a number, character or string"
+      />
+      <br />
+      <br />
+      <input type="button" onclick="myFunction()" value="Add ELement" />
+    </form>
+    <br />
+    <div id="box"></div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fibonacci Number</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      input[type="text"] {
+        width: 30%;
+        padding: 10px;
+      }
+      input[type="button"] {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        background-color: cornflowerblue;
+        color: white;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fibonacci Series Generator</h1>
+    <input
+      type="text"
+      id="txtloop"
+      placeholder="Enter the length of Fibonacci series"
+    />
+    <br />
+    <br />
+    <input
+      type="button"
+      id="btnEnter"
+      value="Enter"
+      onclick="fibonacci_series(txtloop.value)"
+    />
+
+    <p
+      id="output"
+      style="font-size: 2em; overflow-y: scroll; overflow-wrap: break-word"
+    ></p>
+
+    <script>
+      var fibonacci_series = function (n) {
+        if (n == 1) {
+          var loop = [0, 1];
+          document.getElementById("output").innerHTML = loop;
+          return loop;
+        } else {
+          var s = fibonacci_series(n - 1);
+          s.push(s[s.length - 1] + s[s.length - 2]);
+          document.getElementById("output").innerHTML = s;
+          return s;
+        }
+      };
+    </script>
+  </body>
+</html>

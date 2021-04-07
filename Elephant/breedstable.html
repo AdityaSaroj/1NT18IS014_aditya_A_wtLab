@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Breeds Table</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #3c91e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li>
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li>
+          <a href="breeds.html" class="nav-link">Breeds</a>
+        </li>
+        <li>
+          <a href="breedstable.html" class="nav-link">Breeds Table</a>
+        </li>
+        <li>
+          <a href="form.html" class="nav-link">Insert New Breed</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Breeds Table</h1>
+      <br />
+      <table>
+        <tr>
+          <th>Breed</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Video</th>
+          <th>Audio</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/Asian_elephant"> Asian </a>
+          </td>
+          <td>
+            The Asian elephant (Elephas maximus) weighs about 5,500 kg and has a
+            shoulder height of up to 3.5 metres. The Asian elephant includes
+            three subspecies: the Indian, or mainland (E. maximus indicus), the
+            Sumatran (E. maximus sumatranus), and the Sri Lankan (E. maximus
+            maximus). African elephants have much larger ears, which are used to
+            dissipate body heat.
+          </td>
+          <td>
+            <img
+              src="https://biologydictionary.net/wp-content/uploads/2020/09/Asian-elephant-1.jpg"
+              alt="asian"
+              width="300"
+              height="200"
+            />
+          </td>
+          <td>
+            <video width="300" height="200" controls>
+              <source src="asian.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </td>
+          <td>
+            <audio controls>
+              <source src="asian.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/African_elephant">
+              African
+            </a>
+          </td>
+          <td>
+            The African savanna, or bush, elephant (Loxodonta africana) weighs
+            up to 8,000 kg (9 tons) and stands 3 to 4 metres (10 to 13 feet) at
+            the shoulder. The African forest elephant (Loxodonta cyclotis),
+            which lives in rainforests, was recognized as a separate species in
+            2000 and is smaller than the savanna elephant. It has slender,
+            downward-pointing tusks. The common belief that there existed
+            “pygmy” and “water” elephants has no basis; they are probably
+            varieties of the African forest elephants.
+          </td>
+          <td>
+            <img
+              src="https://www.cms.int/west-african-elephants/sites/default/files/styles/news_slideshow/public/news_featured_image/elephant_angelo_cavalli_www.robertharding.com_.jpg?itok=_Fg2W4IZ"
+              alt="african"
+              width="300"
+              height="200"
+            />
+          </td>
+          <td>
+            <video width="300" height="200" controls>
+              <source src="african.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </td>
+          <td>
+            <audio controls>
+              <source src="african.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
