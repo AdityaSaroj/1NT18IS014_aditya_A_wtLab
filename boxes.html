@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Castle</title>
+    <style>
+      .square {
+        height: 400px;
+        width: 400px;
+        padding: 40px;
+        background-color: purple;
+        margin: auto;
+      }
+
+      .squar {
+        height: 300px;
+        width: 300px;
+        padding: 30px;
+        background-color: orange;
+        margin: auto;
+      }
+
+      .squa {
+        height: 200px;
+        width: 200px;
+        padding: 15px;
+        background-color: violet;
+        margin: auto;
+      }
+      .squ {
+        height: 60px;
+        width: 60px;
+        padding: 30px;
+        background-color: gray;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="square" id="b1">
+      <div class="squar" id="b2">
+        <div class="squa" id="b3">
+          <div class="squ" id="b4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const b1 = document.getElementById("b1");
+    const b2 = document.getElementById("b2");
+    const b3 = document.getElementById("b3");
+    const b4 = document.getElementById("b4");
+    let flag = false;
+
+    b1.addEventListener("mouseenter", () => {
+      console.log("entered purple area");
+    });
+    b2.addEventListener("mouseenter", () => {
+      console.log("entered orange area");
+    });
+    b3.addEventListener("mouseenter", () => {
+      console.log("entered violet area");
+    });
+    b4.addEventListener("mouseenter", () => {
+      console.log("entered gray area");
+    });
+  </script>
+</html>
