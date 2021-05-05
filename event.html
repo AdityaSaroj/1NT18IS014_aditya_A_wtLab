@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+    <script>
+      function myFunc() {
+        var x, i;
+        x = document.querySelectorAll(".example");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "yellow";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2 class="example">This is an example</h2>
+    <p class="example">This paragraph consists of the word example</p>
+
+    <p class="example">Another example paragraph</p>
+
+    <button onclick="myFunc()">Click me</button>
+  </body>
+</html>

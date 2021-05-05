@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Event Capturing</title>
+    <style>
+      body * {
+        margin: 10px;
+        border: 5px solid blue;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      FORM
+      <div>
+        DIV
+        <p>P</p>
+      </div>
+    </form>
+
+    <script>
+      for (let elem of document.querySelectorAll("*")) {
+        elem.addEventListener(
+          "click",
+          (e) => alert(`Event Capturing: ${elem.tagName}`),
+          true
+        );
+      }
+    </script>
+  </body>
+</html>
