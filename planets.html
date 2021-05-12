@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planets</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+      button {
+        padding: 50px;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: 700;
+        border: 0;
+        outline: 0;
+      }
+      .merc-btn {
+        background-color: #1a1a1a;
+        color: #fff;
+      }
+      .venus-btn {
+        background-color: #e6e6e6;
+      }
+      .earth-btn {
+        background-color: #2f6a69;
+        color: #fff;
+      }
+      .mars-btn {
+        background-color: #993d00;
+        color: #fff;
+      }
+      .jupi-btn {
+        background-color: #b07f35;
+        color: #fff;
+      }
+      .satu-btn {
+        background-color: #b08f36;
+        color: #fff;
+      }
+      .uran-btn {
+        background-color: #5580aa;
+        color: #fff;
+      }
+      .nept-btn {
+        background-color: #366896;
+        color: #fff;
+      }
+    </style>
+
+    <script>
+      function Planet(name, distance, radius) {
+        this.name = name;
+        this.distance = distance;
+        this.radius = radius;
+
+        this.display = function () {
+          document.getElementById(
+            "dsp"
+          ).innerHTML = `The planet <strong>${this.name}</strong> is <strong>${this.distance} million kms</strong> away from the Sun. Its radius is <strong>${this.radius} kms</strong>.`;
+        };
+      }
+      function fun1() {
+        let newPlanet = new Planet("Mercury", "52.816", "2439");
+        newPlanet.display();
+      }
+
+      function fun2() {
+        let newPlanet2 = new Planet("Venus", "107.78", "6052");
+        newPlanet2.display();
+      }
+
+      function fun3() {
+        let newPlanet3 = new Planet("Earth", "151.06", "6378");
+        newPlanet3.display();
+      }
+
+      function fun4() {
+        let newPlanet4 = new Planet("Mars", "247.72", "3398");
+        newPlanet4.display();
+      }
+
+      function fun5() {
+        let newPlanet5 = new Planet("Jupiter", "756.52", "71494");
+        newPlanet5.display();
+      }
+
+      function fun6() {
+        let newPlanet6 = new Planet("Saturn", "1434", "60330");
+        newPlanet6.display();
+      }
+
+      function fun7() {
+        let newPlanet7 = new Planet("Uranus", "2871", "25559");
+        newPlanet7.display();
+      }
+
+      function fun8() {
+        let newPlanet8 = new Planet("Neptune", "4495", "24750");
+        newPlanet8.display();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Planets</h1>
+    <button onclick="fun1()" class="merc-btn">Mercury</button>
+    <button onclick="fun2()" class="venus-btn">Venus</button>
+    <button onclick="fun3()" class="earth-btn">Earth</button>
+    <button onclick="fun4()" class="mars-btn">Mars</button>
+    <button onclick="fun5()" class="jupi-btn">Jupiter</button>
+    <button onclick="fun6()" class="satu-btn">Saturn</button>
+    <button onclick="fun7()" class="uran-btn">Uranus</button>
+    <button onclick="fun8()" class="nept-btn">Neptune</button>
+    <!-- <input type="radio" name="planets" value="mercury" onclick="fun1()" />
+    <label for="mercury">Mercury</label><br />
+    <input type="radio" name="planets" value="venus" onclick="fun2()" />
+    <label for="venus">Venus</label><br />
+    <input type="radio" name="planets" value="earth" onclick="fun3()" />
+    <label for="earth">Earth</label><br />
+    <input type="radio" name="planets" value="mars" onclick="fun4()" />
+    <label for="mars">Mars</label><br />
+    <input type="radio" name="planets" value="jupiter" onclick="fun5()" />
+    <label for="jupiter">Jupiter</label><br />
+    <input type="radio" name="planets" value="saturn" onclick="fun6()" />
+    <label for="saturn">Saturn</label><br />
+    <input type="radio" name="planets" value="uranus" onclick="fun7()" />
+    <label for="uranus">Uranus</label><br />
+    <input type="radio" name="planets" value="neptune" onclick="fun8()" />
+    <label for="neptune">Neptune</label><br /> -->
+    <br /><br />
+    <p id="dsp"></p>
+  </body>
+</html>
